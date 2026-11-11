@@ -1,12 +1,17 @@
 # Swiss Typographic — a DSH skin
 
+[![validate-skin](https://github.com/0xmrxp/dsh-skin-swiss-typographic/actions/workflows/validate.yml/badge.svg)](https://github.com/0xmrxp/dsh-skin-swiss-typographic/actions/workflows/validate.yml)
+![manifest](https://img.shields.io/badge/skin%20manifest-v2-blue)
+![license](https://img.shields.io/badge/license-MIT-green)
+![css only](https://img.shields.io/badge/runtime-CSS--only-informational)
+
 **International Typographic Style, rebuilt for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web GUI.**
 
 One red. Everything else is ink on paper.
 
-<p align="center">
-  <em>White canvas · strict gray ladder · Helvetica's neutrality · a single accent: Swiss red</em>
-</p>
+| Light — paper | Dark — print shop |
+| --- | --- |
+| ![Swiss Typographic light](skins/swiss-typographic/preview/light.png) | ![Swiss Typographic dark](skins/swiss-typographic/preview/dark.png) |
 
 ## Design language
 

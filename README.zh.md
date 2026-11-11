@@ -1,8 +1,17 @@
 # Swiss Typographic — DSH 皮肤
 
+[![validate-skin](https://github.com/0xmrxp/dsh-skin-swiss-typographic/actions/workflows/validate.yml/badge.svg)](https://github.com/0xmrxp/dsh-skin-swiss-typographic/actions/workflows/validate.yml)
+![manifest](https://img.shields.io/badge/skin%20manifest-v2-blue)
+![license](https://img.shields.io/badge/license-MIT-green)
+![css only](https://img.shields.io/badge/runtime-CSS--only-informational)
+
 **为 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web GUI 重建的瑞士国际主义排版风格。**
 
 一点红，其余皆是纸上墨迹。
+
+| 浅色 —— 纸 | 深色 —— 印刷车间 |
+| --- | --- |
+| ![浅色预览](skins/swiss-typographic/preview/light.png) | ![深色预览](skins/swiss-typographic/preview/dark.png) |
 
 ## 设计语言
 
