@@ -9,6 +9,10 @@
 
 One red. Everything else is ink on paper.
 
+<p align="center">
+  <img src="assets/preview-poster.png" alt="Swiss Typographic — one red. Everything else is ink on paper." width="100%" />
+</p>
+
 | Light — paper | Dark — print shop |
 | --- | --- |
 | ![Swiss Typographic light](skins/swiss-typographic/preview/light.png) | ![Swiss Typographic dark](skins/swiss-typographic/preview/dark.png) |
