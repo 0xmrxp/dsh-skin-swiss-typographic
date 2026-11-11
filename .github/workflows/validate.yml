@@ -1,9 +1,10 @@
 name: validate-skin
 on:
   push:
-    paths: ["skins/**", "scripts/**"]
+    paths: ["skins/**", "scripts/**", ".github/workflows/**"]
   pull_request:
     paths: ["skins/**", "scripts/**"]
+  workflow_dispatch:
 jobs:
   validate:
     runs-on: ubuntu-latest
