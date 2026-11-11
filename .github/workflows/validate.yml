@@ -1,0 +1,25 @@
+name: validate-skin
+on:
+  push:
+    paths: ["skins/**", "scripts/**"]
+  pull_request:
+    paths: ["skins/**", "scripts/**"]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: zhu1090093659/dsh-skins
+          ref: main
+          path: dsh-skins
+      - uses: actions/checkout@v4
+        with:
+          path: skin
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate skin against the v2 contract
+        run: |
+          cd dsh-skins
+          node scripts/dsh-skin.cjs validate ../skin/skins/swiss-typographic

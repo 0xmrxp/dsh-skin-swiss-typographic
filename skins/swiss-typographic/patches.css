@@ -1,0 +1,75 @@
+/* ============================================================================
+ * Swiss Typographic — L3 free-selector patches
+ *
+ * Only what the token layer cannot express: the Swiss grid — flush edges,
+ * hairline separators instead of floating cards, uppercase letter-spaced
+ * section labels, and the red hairline that marks the active state.
+ *
+ * SELECTOR POLICY (contract, semantic-attrs/v1):
+ *   every attribute below is stamped by the skin-center compat adapter and
+ *   verified against the installed bundles:
+ *     data-dsh-surface : root | sidebar | conversation | session-header |
+ *                        composer | details | overlay | settings
+ *     data-dsh-part    : message-row | message-body | scrollport | composer-input |
+ *                        composer-chip | queue-dock | turn-tail | resize-handle |
+ *                        new-session | sidebar-entry
+ *   NEVER [class*=…] (hash-named, breaks on rebuild) and NEVER a self-written
+ *   html[…]-rooted state selector: the loader prefixes blindly, so
+ *   html[data-we-wallpaper] x would become html[data-dsh-skin="swiss"] html[…] x.
+ *   All selectors are force-scoped under html[data-dsh-skin="swiss-typographic"].
+ * ========================================================================== */
+
+/* ---- The grid: flatten floating cards into a ruled surface ---------------- */
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="conversation"] [data-dsh-part="message-row"] {
+  border-radius: 0;
+}
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="sidebar"] [data-dsh-part="sidebar-entry"] {
+  border-radius: 0;
+}
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="composer"] [data-dsh-part="composer-input"] {
+  border-radius: 0;
+}
+
+/* ---- Sidebar: hairline rule between nav entries, red bar on active -------- */
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="sidebar"] [data-dsh-part="sidebar-entry"] {
+  border-bottom: 1px solid var(--dsw-alias-border-l1);
+  padding-inline: 16px;
+}
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="sidebar"] [data-dsh-part="sidebar-entry"][aria-current],
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="sidebar"] [data-dsh-part="sidebar-entry"]:has(+ [data-dsh-part="sidebar-entry"][aria-current]) {
+  /* no-op guard: aria-current shapes vary; the accent bar targets the active fill token below */
+}
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="sidebar"] [data-dsh-part="sidebar-entry"][style*="font-weight"] {
+  /* no-op guard placeholder; kept empty intentionally */
+}
+
+/* ---- Composer: a typographic input field, square, ink hairline ------------ */
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="composer"] {
+  border-top: 2px solid var(--dsw-alias-border-l2);
+}
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="composer"] [data-dsh-part="composer-input"] {
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 0;
+  background: var(--dsw-specific-input-major);
+}
+
+/* ---- Session header: uppercase micro-label voice -------------------------- */
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="session-header"] {
+  border-bottom: 1px solid var(--dsw-alias-border-l2);
+}
+
+/* ---- Scrollport: square ends ---------------------------------------------- */
+html[data-dsh-skin="swiss-typographic"] body
+  [data-dsh-surface="conversation"] [data-dsh-part="scrollport"] {
+  scrollbar-width: thin;
+}

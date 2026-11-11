@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.linxin666.org/dsh-skin/v2.json",
+  "skinManifestVersion": 2,
+  "id": "swiss-typographic",
+  "name": "瑞士排版",
+  "nameEn": "Swiss Typographic",
+  "author": "0xmrxp",
+  "license": "MIT",
+  "licenseUrl": "https://github.com/0xmrxp/dsh-skin-swiss-typographic/blob/main/LICENSE",
+  "version": "1.0.0",
+  "tagline": "白色网格 · Helvetica 语气 · 一点红 —— International Typographic Style",
+  "description": "以瑞士国际主义排版风格（International Typographic Style）重建 DSH Web GUI 的观感：纯白画布、严格的灰阶层次、Helvetica/Neue Haas 的中性与 Inter 的现代替代，全界面只保留一个强调色 —— 瑞士红 (#E30613)，用于品牌、主按钮与焦点环。圆角全部压平至 0–2px，阴影收敛为细线与极浅投影，网格线用发丝边框表达。深色模式采用印刷灰黑 (#111111)，强调色不变。不使用背景媒体，不使用装饰渐变 —— 留白与网格就是全部装饰。",
+  "tags": [
+    "swiss",
+    "international-typographic-style",
+    "minimal",
+    "grid",
+    "helvetica",
+    "red-accent",
+    "light-dark",
+    "flat",
+    "css-only"
+  ],
+  "accent": "#E30613",
+  "order": 60,
+  "preview": {
+    "light": "preview/light.jpg",
+    "dark": "preview/dark.jpg"
+  },
+  "contributes": {
+    "stylesheet": "skin.css",
+    "patches": "patches.css"
+  }
+}
