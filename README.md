@@ -67,6 +67,25 @@ skins/swiss-typographic/
 └── patches.css    # L3: the grid — flush edges, hairline rules, square inputs
 ```
 
+## 🤝 Contributing
+
+This skin targets the community skin-center contract
+([dsh-skins/skins contract v2](https://github.com/zhu1090093659/dsh-skins/tree/main/contracts)).
+To submit a <em>different</em> skin to the official catalog, read the
+[dsh-skins CONTRIBUTING](https://github.com/zhu1090093659/dsh-skins/blob/main/CONTRIBUTING.md) —
+catalog intake has evidence and copyright gates. For changes to this skin,
+open an issue here first.
+
+## 👥 Contributors
+
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/0xmrxp"><img src="https://avatars.githubusercontent.com/u/285124862?v=4" width="64" alt="0xmrxp"/><br/><sub><b>0xmrxp</b></sub><br/><sub>design & code</sub></a>
+</td>
+</tr>
+</table>
+
 ## License
 
 [MIT](./LICENSE) © 0xmrxp
