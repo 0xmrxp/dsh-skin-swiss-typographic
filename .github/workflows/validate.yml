@@ -9,25 +9,32 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout dsh-skins tooling
+        uses: actions/checkout@v4
         with:
           repository: zhu1090093659/dsh-skins
           ref: main
           path: dsh-skins
-      - uses: actions/checkout@v4
+      - name: Checkout skin
+        uses: actions/checkout@v4
         with:
           path: skin
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          version: 9
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Install dsh-skins tooling dependencies
+          node-version: 24.9.0
+          cache: pnpm
+          cache-dependency-path: dsh-skins/pnpm-lock.yaml
+      - name: Install dependencies
         run: |
           cd dsh-skins
-          pnpm install --frozen-lockfile
-          pnpm --filter @linxin666/dsh-client-ui-skin-center build
+          pnpm install --frozen-lockfile --ignore-scripts
+      - name: Build skin-center lib
+        run: |
+          cd dsh-skins
+          pnpm build
       - name: Validate skin against the v2 contract
         run: |
           cd dsh-skins
